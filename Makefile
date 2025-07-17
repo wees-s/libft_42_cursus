@@ -6,7 +6,7 @@
 #    By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/15 11:17:28 by wedos-sa          #+#    #+#              #
-#    Updated: 2025/07/16 18:27:56 by wedos-sa         ###   ########.fr        #
+#    Updated: 2025/07/17 15:11:54 by wedos-sa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,10 @@ SRCS =	ft_atoi.c	\
 	ft_memset.c	\
 	ft_memcmp.c	\
 	ft_memcpy.c	\
-	ft_strlcat.c
+	ft_strlcat.c	\
+	ft_strchr.c	\
+	ft_strrchr.c	\
+	ft_memchr.c
 
 OBJS = $(SRCS:.c=.o)
 
