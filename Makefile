@@ -6,7 +6,7 @@
 #    By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/15 11:17:28 by wedos-sa          #+#    #+#              #
-#    Updated: 2025/07/17 15:11:54 by wedos-sa         ###   ########.fr        #
+#    Updated: 2025/07/18 12:10:50 by wedos-sa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,8 +45,15 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
+bonus:
+	@echo "Sem funções bônus ainda"
+
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
+so: clean
+	$(CC) -fPIC $(CFLAGS) -c $(SRCS)
+	$(CC) -shared -o libft.so $(OBJS)
 
 clean:
 	rm -f $(OBJS)
@@ -56,4 +63,4 @@ fclean:
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re so
