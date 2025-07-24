@@ -6,7 +6,7 @@
 /*   By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 13:28:36 by wedos-sa          #+#    #+#             */
-/*   Updated: 2025/07/24 14:21:06 by wedos-sa         ###   ########.fr       */
+/*   Updated: 2025/07/24 15:53:51 by wedos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ static size_t	count_words(char const *s, char c)
 	while (s[i])
 	{
 		if ((s[i] != c) || (s[i] == c && s[i + 1] != c))
-		{
 			j++;
-			i++;
-		}
+		i++;
 		while (flag == 1 && s[i] != '\0')
 		{
 			if (s[i] == c)
@@ -74,33 +72,25 @@ static	void	*free_all(char **s, size_t size)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_fill_word(const char *s, char c, char **res, size_t size)
 {
-	char	**res;
-	int		k;
-	size_t	size;
 	size_t	i;
 	size_t	j;
+	int		k;
 
-	size = count_words(s, c);
-	res = malloc((size + 1) * sizeof(char *));
-	if (!res)
-		return (NULL);
 	i = 0;
 	j = 0;
 	k = 0;
-	if (!s)
-		return ((void*)0);
 	while (i < ft_strlen(s))
 	{
 		while (s[i] == c)
-            		i++;
+			i++;
 		if (s[i] != c)
 			j = i;
 		while (s[i] != c && s[i] != '\0')
 			i++;
 		if (s[i] == '\0' && s[i - 1] == c)
-			break;
+			break ;
 		res[k] = word(j, i, s);
 		if (!(*res))
 			return (free_all(res, size));
@@ -111,6 +101,18 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
+	size_t	size;
+
+	size = count_words(s, c);
+	res = malloc((size + 1) * sizeof(char *));
+	if (!res)
+		return (NULL);
+	res = ft_fill_word(s, c, res, size);
+	return (res);
+}
 
 /*
 int main(){
