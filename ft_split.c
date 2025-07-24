@@ -6,7 +6,7 @@
 /*   By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 13:28:36 by wedos-sa          #+#    #+#             */
-/*   Updated: 2025/07/24 15:53:51 by wedos-sa         ###   ########.fr       */
+/*   Updated: 2025/07/24 17:16:28 by wedos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,18 +113,3 @@ char	**ft_split(char const *s, char c)
 	res = ft_fill_word(s, c, res, size);
 	return (res);
 }
-
-/*
-int main(){
-//      split       this for   me  !       *
-#include <stdio.h>
-    char    **resss = ft_split("      split       this for   me  !       ", ' ');
-    int    i = 0;
-    while (i < 5)
-    {
-        printf("%s:corte\n", resss[i]);
-        i++;
-    }
-    return 0;
-}
-*/
