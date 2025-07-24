@@ -6,7 +6,7 @@
 /*   By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:28:47 by wedos-sa          #+#    #+#             */
-/*   Updated: 2025/07/23 16:37:52 by wedos-sa         ###   ########.fr       */
+/*   Updated: 2025/07/24 11:41:32 by wedos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		n_string[i] = s[start + i];
 		i++;
 	}
-	//n_string[i] = '\0';
+	n_string[i] = '\0';
 	return (n_string);
 }

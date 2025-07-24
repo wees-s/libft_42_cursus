@@ -6,7 +6,7 @@
 /*   By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 11:25:06 by wedos-sa          #+#    #+#             */
-/*   Updated: 2025/07/22 12:32:59 by wedos-sa         ###   ########.fr       */
+/*   Updated: 2025/07/24 14:23:19 by wedos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	{
 		if (!set)
 			return ((char *)s1);
-		return (NULL);
+		return ((void *)0);
 	}
 	last = ft_strlen(s1) - 1;
 	first = 0;
