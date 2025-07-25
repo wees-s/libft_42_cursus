@@ -6,7 +6,7 @@
 /*   By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 17:11:37 by wedos-sa          #+#    #+#             */
-/*   Updated: 2025/07/24 15:06:57 by wedos-sa         ###   ########.fr       */
+/*   Updated: 2025/07/25 18:06:27 by wedos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*n_string;
 
 	s1_size = ft_strlen(s1);
-	if (s1 && s2)
-	{
-		n_string = (char *)malloc(s1_size + ft_strlen(s2) + 1);
-		if (!n_string)
-			return (NULL);
-	}
+	n_string = (char *)malloc(s1_size + ft_strlen(s2) + 1);
+	if (!n_string)
+		return (NULL);
 	i = 0;
 	while (s1[i] != '\0')
 	{

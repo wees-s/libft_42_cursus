@@ -6,7 +6,7 @@
 #    By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/15 11:17:28 by wedos-sa          #+#    #+#              #
-#    Updated: 2025/07/22 18:03:07 by wedos-sa         ###   ########.fr        #
+#    Updated: 2025/07/25 17:32:06 by wedos-sa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,11 +38,11 @@ SRCS =	ft_atoi.c	\
 	ft_memchr.c	\
 	ft_strnstr.c	\
 	ft_calloc.c	\
-	ft_memmove.c	\
 	ft_substr.c	\
 	ft_strjoin.c	\
 	ft_strtrim.c	\
-	ft_split.c
+	ft_split.c	\
+	ft_itoa.c
 
 OBJS = $(SRCS:.c=.o)
 
