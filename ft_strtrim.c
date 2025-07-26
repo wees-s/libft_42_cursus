@@ -6,7 +6,7 @@
 /*   By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 11:25:06 by wedos-sa          #+#    #+#             */
-/*   Updated: 2025/07/25 18:12:44 by wedos-sa         ###   ########.fr       */
+/*   Updated: 2025/07/26 14:16:57 by wedos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	if (!s1 || !set)
-	{
-		if (!set)
-			return ((char *)s1);
-		return ((void *)0);
-	}
-	last = ft_strlen(s1) - 1;
+		return (ft_strdup(""));
+	last = ft_strlen(s1);
 	first = 0;
-	while ((s1 && set) && ft_strchr(set, s1[first]))
+	while ((s1 && set) && ft_strchr(set, s1[first]) && first <= last)
 		first++;
-	while ((s1 && set) && ft_strchr(set, s1[last]))
+	while ((s1 && set) && ft_strchr(set, s1[last]) && first <= last)
 		last--;
 	n_string = malloc(last - first * sizeof(char) + 2);
 	if (!n_string)
-		return (NULL);
+		return (ft_strdup(NULL));
 	while (first <= last)
 	{
 		n_string[i] = s1[first];
@@ -43,9 +39,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	n_string[i] = '\0';
 	return (n_string);
-}
-
-static char	*trim(char const *s1, char const *set)
-{
-
 }

@@ -6,7 +6,7 @@
 /*   By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:28:47 by wedos-sa          #+#    #+#             */
-/*   Updated: 2025/07/24 15:22:06 by wedos-sa         ###   ########.fr       */
+/*   Updated: 2025/07/26 15:15:19 by wedos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	if (start > ft_strlen(s) || start + len > ft_strlen(s))
+	if (start > ft_strlen(s))
 		return (ft_strdup(""));
-	n_string = (char *)malloc(sizeof(*s) * len + 1);
+	if (len > (ft_strlen(s + start)))
+		len = ft_strlen(s + start);
+	n_string = (char *)malloc(sizeof(char) * (len + 1));
 	if (!n_string)
 		return (NULL);
 	i = 0;

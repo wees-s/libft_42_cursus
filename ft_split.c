@@ -6,7 +6,7 @@
 /*   By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 13:28:36 by wedos-sa          #+#    #+#             */
-/*   Updated: 2025/07/24 17:16:28 by wedos-sa         ###   ########.fr       */
+/*   Updated: 2025/07/26 12:11:13 by wedos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ char	**ft_split(char const *s, char c)
 	size = count_words(s, c);
 	res = malloc((size + 1) * sizeof(char *));
 	if (!res)
-		return (NULL);
+		return ((char **)ft_strdup(""));
 	res = ft_fill_word(s, c, res, size);
 	return (res);
 }
