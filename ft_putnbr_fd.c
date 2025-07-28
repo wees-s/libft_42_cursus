@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/28 16:29:19 by wedos-sa          #+#    #+#             */
-/*   Updated: 2025/07/28 18:41:38 by wedos-sa         ###   ########.fr       */
+/*   Created: 2025/07/28 13:53:38 by wedos-sa          #+#    #+#             */
+/*   Updated: 2025/07/28 16:21:06 by wedos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-	size_t			i;
+	int		div;
+	char	c;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	i = 0;
-	if (!src && !dest)
-		return (NULL);
-	if (d > s)
-		while (n-- > 0)
-			d[n] = s[n];
+	div = 1;
+	if (!fd)
+		fd = 1;
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
 	else
 	{
-		while (i < n)
+		if (n < 0)
 		{
-			d[i] = s[i];
-			i++;
+			n = -n;
+			ft_putchar_fd('-', fd);
+		}
+		while (n / div > 10)
+			div = div * 10;
+		while (n >= 0 && div != 0)
+		{
+			c = n / div + 48;
+			ft_putchar_fd(c, fd);
+			n = n % div;
+			div = div / 10;
 		}
 	}
-	return (dest);
 }

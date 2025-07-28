@@ -6,7 +6,7 @@
 /*   By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 11:25:06 by wedos-sa          #+#    #+#             */
-/*   Updated: 2025/07/26 14:16:57 by wedos-sa         ###   ########.fr       */
+/*   Updated: 2025/07/27 12:53:55 by wedos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		last--;
 	n_string = malloc(last - first * sizeof(char) + 2);
 	if (!n_string)
-		return (ft_strdup(NULL));
+		return (NULL);
 	while (first <= last)
 	{
 		n_string[i] = s1[first];
