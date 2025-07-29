@@ -7,9 +7,9 @@ This challenge forces students to understand low-level logic, memory manipulatio
 
 ---
 
-## 📚 Implemented Functions & Logic
+##  Implemented Functions & Logic
 
-### 🔹 Character Classification
+###  Character Classification
 
 **Functions:**  
 `ft_isalnum` / `ft_isalpha` / `ft_isascii` / `ft_isdigit` / `ft_isprint`
@@ -27,7 +27,7 @@ We check whether the character falls into the ASCII range of uppercase, lowercas
 
 ---
 
-### 🔹 Case Conversion
+###  Case Conversion
 
 **Functions:**
 `ft_toupper` / `ft_tolower`
@@ -46,7 +46,7 @@ If the character is between `'A'` (65) and `'Z'` (90), it converts to lowercase 
 
 ---
 
-### 🔹 Memory Search
+###  Memory Search
 
 **Function:**
 `ft_memchr`
@@ -79,7 +79,7 @@ Instead of depending on string types, `memchr` works with `void*` and casts ever
 
 ---
 
-## 🧠 Why This Matters
+##  Why This Matters
 
 Rewriting libc functions manually may seem redundant at first glance. But the point is to deeply understand how low-level operations work:
 
@@ -99,7 +99,7 @@ You’ll learn:
 
 ---
 
-## 🛠 How to Compile & Use
+##  How to Compile & Use
 
 Compile the library with:
 
@@ -121,7 +121,7 @@ gcc main.c -L. -lft
 
 ---
 
-## 🗂 Project Structure
+##  Project Structure
 
 ```
 libft/
@@ -137,14 +137,14 @@ libft/
 
 ---
 
-## ✍️ Author
+## ✍ Author
 
 **Wesley Alexandre**
 Pisciner at 42 São Paulo
 
 ---
 
-## 📜 License
+##  License
 
 This project is part of the 42 School academic program.
 Use it as a learning reference — don’t copy it blindly. Learn by doing. That’s the 42 way.
