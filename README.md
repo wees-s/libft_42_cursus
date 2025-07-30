@@ -1,5 +1,9 @@
 # 💻 libft – 42 Cursus
+
+
 pt.1 Functions && Exemples / pt.2 Why? / pt.3 How to Use / pt.4 Closing remarks
+
+
 The **libft** is the first mandatory project of the Common Core at [42 School](https://42.fr/en/homepage/). In this project, we are required to recreate a set of standard C library functions from scratch — without relying on the actual libc.
 
 This challenge forces students to understand low-level logic, memory manipulation, and pointer handling at the core of C programming.
