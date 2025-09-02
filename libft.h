@@ -6,7 +6,7 @@
 /*   By: wedos-sa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 11:35:44 by wedos-sa          #+#    #+#             */
-/*   Updated: 2025/07/29 11:11:46 by wedos-sa         ###   ########.fr       */
+/*   Updated: 2025/09/02 15:24:42 by wedos-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -54,5 +55,49 @@ void	ft_putnbr_fd(int n, int fd);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *string);
+
+/* ft_printf header*/
+
+int		ft_putchar_i(int c);
+int		ft_putstr_i(char *s);
+int		ft_putnbr_i(int i);
+int		ft_puthex_i_lower(unsigned int n);
+int		ft_puthex_i_upper(unsigned int n);
+int		ft_printf(const char *str, ...);
+int		ft_selec_hex(unsigned int n, const char *s);
+int		ft_print_address_i(unsigned long long n);
+int		ft_unsignednbr_i(unsigned int n);
+int		ft_output(const char *str, va_list args);
+
+/* struct and lists */
+
+typedef struct s_list
+{
+	struct s_list	*next;
+	void			*data;
+}	t_list;
+
+void	ft_list_push_front(t_list **begin_list, void *data);
+void	ft_list_push_back(t_list **begin_list, void *data);
+
+int		ft_list_size(t_list *begin_list);
+
+t_list	*ft_list_last(t_list *begin_list);
+t_list	*ft_create_elem(void *data);
+t_list	*ft_list_push_strs(int size, char **strs);
+
+/* ft_printf */
+
+int		ft_putchar_i(int c);
+int		ft_putstr_i(char *s);
+int		ft_putnbr_i(int i);
+int		ft_puthex_i_lower(unsigned int n);
+int		ft_puthex_i_upper(unsigned int n);
+int		ft_printf(const char *str, ...);
+int		ft_selec_hex(unsigned int n, const char *s);
+int		ft_print_address_i(unsigned long long n);
+int		ft_unsignednbr_i(unsigned int n);
+int		ft_output(const char *str, va_list args);
+int		ft_printf(const char *str, ...);
 
 #endif
