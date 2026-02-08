@@ -1,3 +1,5 @@
+<img width="2000" height="1000" alt="image" src="https://github.com/user-attachments/assets/65e9804b-1873-49f0-b6d5-58524ee82310" />
+
 # libft
 
 A custom implementation of standard C library functions as part of the 42 School curriculum.
